@@ -9,7 +9,7 @@ const TodoItem = ({todoText, todoDate,id}) => {
   const [editDate, setEditDate] = useState(todoDate);
 
   const DeleteHandler = () => {
-    fetch(`/todos/${id}`,{
+    fetch(`https://todo-backend-production-a0e2.up.railway.app/todos/${id}`,{
       method:'DELETE'
     })
     .then (res=> res.json())
@@ -23,7 +23,7 @@ const TodoItem = ({todoText, todoDate,id}) => {
   }
 
   const UpdateHandler = () => {
-    fetch(`/todos/${id}`, {
+    fetch(`https://todo-backend-production-a0e2.up.railway.app/todos/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
